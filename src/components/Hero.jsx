@@ -18,9 +18,15 @@ function Hero() {
             View Projects
           </a>
 
+          <a href="assets/danramirezcv.pdf" target="_blank" className="btn-primary">
+            Resume
+          </a>
+
           <a href="#contact" className="btn-secondary">
             Contact Me
           </a>
+
+
         </div>
       </div>
     </section>

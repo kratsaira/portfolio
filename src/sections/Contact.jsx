@@ -16,8 +16,14 @@ function Contact() {
         </div>
 
       </div>
+      
+      <div className="scroll-up">
+        <a href="">Scroll up</a>
+      </div>
+
     </section>
-  );
+ 
+);
 }
 
 export default Contact;
