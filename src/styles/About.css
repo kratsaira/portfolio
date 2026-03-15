@@ -1,0 +1,39 @@
+.about {
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .about p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #aaa;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  
+  /* future layout */
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  /* card highlights for future references */
+  .about-card {
+    background: #151515;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 25px;
+  
+    transition: transform 0.25s ease, border 0.25s ease;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-5px);
+    border-color: #444;
+  }

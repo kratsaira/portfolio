@@ -1,0 +1,66 @@
+.projects {
+    text-align: center;
+  }
+  
+  .projects h2 {
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .project-card {
+    background: #151515;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+  
+    transition: transform 0.25s ease, border 0.25s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-6px);
+    border-color: #444;
+  }
+  
+  .project-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    color: #aaa;
+    margin-bottom: 20px;
+  }
+  
+  .tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tech span {
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: #222;
+  }
+  
+  .links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .links a {
+    font-size: 14px;
+    color: #ddd;
+  }
+  
+  .links a:hover {
+    color: white;
+  }
