@@ -10,7 +10,7 @@ function Hero() {
 
         <p>
           I build modern, performant web experiences with React and
-          modern web technologies.
+          modern web technologies. I also design sometimes.
         </p>
 
         <div className="hero-buttons">
