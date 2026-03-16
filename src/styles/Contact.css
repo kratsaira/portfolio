@@ -15,6 +15,7 @@
   .contact-links {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
   }
   
@@ -22,7 +23,8 @@
     border: 1px solid #333;
     padding: 12px 20px;
     border-radius: 6px;
-  
+    width: 140px;
+    text-align: center;
     transition: background 0.2s ease;
   }
   
@@ -31,6 +33,30 @@
   }
 
 .scroll-up {
-    
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.scroll-up a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  transition: all 0.25s ease;
+  animation: floatUp 2s ease-in-out infinite;
 }
   
+.scroll-up a:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+
+@keyframes floatUp {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}

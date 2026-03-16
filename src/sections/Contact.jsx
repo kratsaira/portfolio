@@ -18,7 +18,7 @@ function Contact() {
       </div>
       
       <div className="scroll-up">
-        <a href="">Scroll up</a>
+        <a href="#hero">Scroll up</a>
       </div>
 
     </section>
