@@ -18,7 +18,7 @@ function Hero() {
             View Projects
           </a>
 
-          <a href="src/assets/cv.pdf" target="_blank" className="btn-primary">
+          <a href="./public/cv.pdf" target="_blank" className="btn-primary">
             Resume
           </a>
 
