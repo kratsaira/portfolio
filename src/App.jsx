@@ -5,6 +5,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
+import Design from "./sections/Design";
 import SmoothScroll from "./main";
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Design />
         <Contact />
         <SmoothScroll />
       </main>

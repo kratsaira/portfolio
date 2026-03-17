@@ -18,14 +18,19 @@ function Hero() {
             View Projects
           </a>
 
-          <a href="assets/danramirezcv.pdf" target="_blank" className="btn-primary">
+          <a href="src/assets/cv.pdf" target="_blank" className="btn-primary">
             Resume
           </a>
+
 
           <a href="#contact" className="btn-secondary">
             Contact Me
           </a>
 
+          <div className="scroll-indicator">
+            <span>Scroll</span>
+            <div className="arrow">↓</div>
+        </div>
 
         </div>
       </div>

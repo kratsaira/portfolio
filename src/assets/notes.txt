@@ -1,0 +1,3 @@
+- change skills to icons instead of the name using svgs 
+- 
+

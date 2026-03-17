@@ -4,13 +4,14 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <h2 className="logo">Dan</h2>
+        <h2 className="logo">portfolio.</h2>
 
         <ul className="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#design">design</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
       </div>
     </nav>
