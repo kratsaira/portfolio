@@ -13,8 +13,7 @@ function ProjectCard({ project }) {
         </div>
   
         <div className="links">
-          <a href={project.github}>GitHub</a>
-          <a href={project.demo}>Live</a>
+          <a href={project.demo} target="_blank">Live</a>
         </div>
   
       </div>

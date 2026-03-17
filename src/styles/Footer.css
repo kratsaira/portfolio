@@ -1,7 +1,19 @@
 .footer {
-    border-top: 1px solid #222;
-    padding: 25px 20px;
-    text-align: center;
-    color: #777;
-    font-size: 14px;
+  border-top: 1px solid #222;
+  padding: 25px 20px;
+  text-align: center;
+  color: #777;
+  font-size: clamp(13px, 3.5vw, 15px);
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 30px 40px;
   }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 40px 20px;
+  }
+}
