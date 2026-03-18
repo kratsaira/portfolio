@@ -1,11 +1,10 @@
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   padding: 80px 20px 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   position: relative;
 }
 
@@ -90,7 +89,6 @@
 }
 
 .arrow {
-  margin-bottom: 64px;
   margin-top: 2px;
   font-size: 18px;
   animation: floatUp 1.6s ease-in-out infinite;
