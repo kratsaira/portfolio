@@ -9,6 +9,8 @@ import img1_full from "../assets/azul3.webp";
 import img3_full from "../assets/first_slide.webp";
 import img4_full from "../assets/kadermagazine.webp";
 
+import { SiInstagram } from "react-icons/si";
+
 function Design() {
   const [selected, setSelected] = useState(null);
 
@@ -36,6 +38,13 @@ function Design() {
               <img src={design.thumb} alt="design" loading="lazy" />
             </div>
           ))}
+        </div>
+
+        <div className="see-more-button">
+          <a href="https://www.instagram.com/aira.outsider/" target="_blank" rel="noopener noreferrer" className="see-more-link">
+            <SiInstagram className="icon" />
+            <span>See More</span>
+          </a>
         </div>
 
         {selected && (

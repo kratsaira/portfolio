@@ -66,6 +66,44 @@
   border-radius: 12px;
 }
 
+.see-more-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.see-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 8px;
+  background: #111;
+  border: 1px solid #2a2a2a;
+  color: #eaeaea;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.see-more-link .icon {
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+@media (hover: hover) {
+  .see-more-link:hover {
+    background: #1a1a1a;
+    border-color: #444;
+    transform: translateY(-2px);
+  }
+
+  .see-more-link:hover .icon {
+    transform: scale(1.15);
+  }
+}
+
 @media (min-width: 768px) {
   .design {
     padding: 80px 40px;
