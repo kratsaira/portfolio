@@ -11,11 +11,9 @@ function ProjectCard({ project }) {
             <span key={tech}>{tech}</span>
           ))}
         </div>
-  
         <div className="links">
           <a href={project.demo} target="_blank">Live</a>
         </div>
-  
       </div>
     );
   }

@@ -90,7 +90,8 @@
 }
 
 .arrow {
-  margin-top: 6px;
+  margin-bottom: 64px;
+  margin-top: 2px;
   font-size: 18px;
   animation: floatUp 1.6s ease-in-out infinite;
 }
