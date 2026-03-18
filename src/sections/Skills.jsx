@@ -7,13 +7,12 @@ import {
   FaGitAlt, 
   FaNodeJs,
   FaJava,
-  FaHtml5,
   FaBootstrap,
   FaDatabase,
-  FaGithub
+  FaGithub,
 } from "react-icons/fa";
 
-import { SiSpringboot, SiDotnet, SiMysql, SiMongodb } from "react-icons/si";
+import { SiSpringboot, SiDotnet, SiMysql, SiMongodb, SiFigma, SiMonkeytype } from "react-icons/si";
 
 function Skills() {
 
@@ -49,6 +48,8 @@ function Skills() {
       skills: [
         { name: "Git", icon: <FaGitAlt /> },
         { name: "GitHub", icon: <FaGithub /> },
+        { name: "Figma", icon: <SiFigma /> },
+        { name: "Fast typing (170wpm avg)", icon: <SiMonkeytype /> },
       ]
     }
   ];
@@ -61,7 +62,7 @@ function Skills() {
 
         <div className="skills-groups">
           {skillGroups.map((group) => (
-    <div key={group.title} className="skills-group">
+        <div key={group.title} className="skills-group">
       
       <h3>{group.title}</h3>
 
