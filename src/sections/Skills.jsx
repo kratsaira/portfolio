@@ -1,4 +1,5 @@
 import "../styles/Skills.css"
+import FadeInSection from "../components/FadeInSection";
 
 import { 
   FaReact, 
@@ -55,6 +56,7 @@ function Skills() {
   ];
 
   return (
+
     <section id="skills" className="skills section">
       <div className="container">
 
@@ -66,6 +68,7 @@ function Skills() {
       
       <h3>{group.title}</h3>
 
+    <FadeInSection>
        <div className="skills-grid">
         {group.skills.map((skill) => (
           <div className="skill-card" key={skill.name}>
@@ -74,6 +77,9 @@ function Skills() {
           </div>
         ))}
           </div>
+    </FadeInSection>
+
+
 
             </div>
           ))}

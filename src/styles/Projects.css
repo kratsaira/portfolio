@@ -1,106 +1,79 @@
-.projects {
-  text-align: center;
-  padding: 60px 20px;
+.projects { 
+  text-align: center; 
+  padding: 60px 20px; 
 }
 
-.projects h2 {
-  font-size: clamp(28px, 6vw, 40px);
-  margin-bottom: 40px;
+.projects h2 { 
+  font-size: clamp(28px, 6vw, 40px); 
+  margin-bottom: 40px; 
 }
 
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+.projects-grid { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 20px; 
 }
 
 .project-card {
-  background: #151515;
-  border: 1px solid #222;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 8px;
   padding: 20px;
   text-align: left;
   transition: all 0.25s ease;
 }
 
-@media (hover: hover) {
-  .project-card:hover {
-    transform: translateY(-6px);
-    border-color: #444;
-  }
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.18);
 }
 
-.project-card h3 {
-  margin-bottom: 8px;
-  font-size: 20px;
+.project-card h3 { 
+  margin-bottom: 8px; 
+  font-size: 20px; 
 }
 
-.project-card p {
-  color: #aaa;
-  margin-bottom: 16px;
-  font-size: 15px;
-  line-height: 1.6;
+.project-card p  { 
+  color: #aaa; 
+  margin-bottom: 16px; 
+  font-size: 15px; 
+  line-height: 1.6; 
 }
 
-.tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 16px;
+.tech { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+  margin-bottom: 16px; 
 }
 
 .tech span {
   font-size: 12px;
   padding: 4px 10px;
-  background: #222;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.08);
   color: #ccc;
 }
 
-.links {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+.links a { 
+  font-size: 14px; 
+  color: #ddd; 
+  transition: color 0.2s ease; 
 }
 
-.links a {
-  font-size: 14px;
-  color: #ddd;
-  transition: color 0.2s ease;
-}
-
-@media (hover: hover) {
-  .links a:hover {
-    color: white;
-  }
+.links a:hover { 
+  color: white; 
 }
 
 @media (min-width: 768px) {
-  .projects {
-    padding: 80px 40px;
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
+  .projects { padding: 80px 40px; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
 }
 
 @media (min-width: 1024px) {
-  .projects {
-    padding: 100px 20px;
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .project-card {
-    padding: 24px;
-  }
-
-  .project-card h3 {
-    font-size: 22px;
-  }
+  .projects { padding: 100px 20px; }
+  .project-card { padding: 24px; }
+  .project-card h3 { font-size: 22px; }
 }

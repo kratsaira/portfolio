@@ -1,3 +1,6 @@
+import "../styles/Projects.css"
+
+
 function ProjectCard({ project }) {
     return (
       <div className="project-card">

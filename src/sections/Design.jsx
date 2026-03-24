@@ -1,5 +1,6 @@
 import "../styles/Design.css";
 import { useState } from "react";
+import FadeInSection from "../components/FadeInSection";
 
 import img1_thumb from "../assets/azul3.webp";
 import img3_thumb from "../assets/first_slide.webp";
@@ -18,43 +19,47 @@ function Design() {
     { thumb: img1_thumb, full: img1_full },
     { thumb: img3_thumb, full: img3_full },
     { thumb: img4_thumb, full: img4_full },
-
   ];
 
   return (
-    <section id="design" className="design section">
-      <div className="container">
-        <h2>Design</h2>
+      <section id="design" className="design section">
+            <div className="container">
+              <h2>Design</h2>
 
-        <p>Here's my selected work from my design portfolio.</p>
+              <p>Here's my selected work from my design portfolio.</p>
 
-        <div className="design-grid">
-          {designs.map((design, index) => (
-            <div
-              key={index}
-              className="design-item"
-              onClick={() => setSelected(design.full)}
-            >
-              <img src={design.thumb} alt="design" loading="lazy" />
+              <FadeInSection>
+              <div className="design-grid">
+                {designs.map((design, index) => (
+                  <div
+                    key={index}
+                    className="design-item"
+                    onClick={() => setSelected(design.full)}
+                  >
+                    <img src={design.thumb} alt="design" loading="lazy" />
+                  </div>
+                ))}
+              </div>
+              </FadeInSection>
+
+
+              <div className="see-more-button">
+                <a href="https://www.instagram.com/aira.outsider/" target="_blank" rel="noopener noreferrer" className="see-more-link">
+                  <SiInstagram className="icon" />
+                  See More
+                </a>
+              </div>
+
+              {selected && (
+                <div className="modal" onClick={() => setSelected(null)}>
+                  <img src={selected} alt="full design"/>
+                </div>
+              )}
             </div>
-          ))}
-        </div>
+          </section>
 
-        <div className="see-more-button">
-          <a href="https://www.instagram.com/aira.outsider/" target="_blank" rel="noopener noreferrer" className="see-more-link">
-            <SiInstagram className="icon" />
-            <span>See More</span>
-          </a>
-        </div>
-
-        {selected && (
-          <div className="modal" onClick={() => setSelected(null)}>
-            <img src={selected} alt="full design" />
-          </div>
-        )}
-      </div>
-    </section>
   );
+    
 }
 
 export default Design;
