@@ -15,7 +15,7 @@ function Hero() {
 
         <div className="hero-buttons">
           <a href="#projects" className="btn-primary">
-            View Projects
+            Projects
           </a>
 
           <a href="/cv.pdf" target="_blank" className="btn-primary">

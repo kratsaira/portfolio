@@ -18,10 +18,9 @@
 .project-card {
   background: #151515;
   border: 1px solid #222;
-  border-radius: 14px;
+  border-radius: 8px;
   padding: 20px;
   text-align: left;
-
   transition: all 0.25s ease;
 }
 

@@ -100,7 +100,7 @@
   }
 
   .see-more-link:hover .icon {
-    transform: scale(1.15);
+    transform: scale(1.15) rotate(2deg);
   }
 }
 

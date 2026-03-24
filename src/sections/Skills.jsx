@@ -18,7 +18,7 @@ function Skills() {
 
   const skillGroups = [
     {
-      title: "frontend",
+      title: "Frontend",
       skills: [
         { name: "React", icon: <FaReact /> },
         { name: "JavaScript", icon: <FaJs /> },
@@ -27,7 +27,7 @@ function Skills() {
       ]
     },
     {
-      title: "backend",
+      title: "Backend",
       skills: [
         { name: "Node.js", icon: <FaNodeJs /> },
         { name: "Java", icon: <FaJava /> },
@@ -36,7 +36,7 @@ function Skills() {
       ]
     },
     {
-      title: "databases",
+      title: "Databases",
       skills: [
         { name: "MySQL", icon: <SiMysql /> },
         { name: "OracleDB", icon: <FaDatabase /> },
@@ -44,7 +44,7 @@ function Skills() {
       ]
     },
     {
-      title: "tools",
+      title: "Tools",
       skills: [
         { name: "Git", icon: <FaGitAlt /> },
         { name: "GitHub", icon: <FaGithub /> },
