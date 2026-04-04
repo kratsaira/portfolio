@@ -27,14 +27,16 @@
 .hero h2 {
   font-size: clamp(18px, 5vw, 28px);
   font-weight: 400;
-  color: #aaa;
+  color: #fff;
   margin-bottom: 15px;
+  opacity: 0.8;
 }
 
 .hero p {
   font-size: clamp(15px, 4vw, 18px);
-  color: #bbb;
+  color: #fff;
   margin-bottom: 30px;
+  opacity: 0.8;
 }
 
 .hero-buttons {

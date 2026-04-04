@@ -36,7 +36,8 @@
 }
 
 .project-card p  { 
-  color: #aaa; 
+  color: #fff;
+  opacity: 0.8; 
   margin-bottom: 16px; 
   font-size: 15px; 
   line-height: 1.6; 
