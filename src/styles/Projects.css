@@ -78,3 +78,29 @@
   .project-card { padding: 24px; }
   .project-card h3 { font-size: 22px; }
 }
+
+.disabled-link {
+  position: relative;
+  color: gray;
+  cursor: not-allowed;
+  font-size: 14px;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.disabled-link:hover .tooltip {
+  opacity: 1;
+}
