@@ -1,9 +1,11 @@
 import "../styles/Hero.css"
 
+
 function Hero() {
   return (
     <section id="hero" className="hero">
       <div className="hero-container">
+
         <h1>Dan Ramírez</h1>
 
         <h2>Software Developer · Graphic Designer</h2>
