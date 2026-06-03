@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import Lenis from "lenis";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./sections/About";
@@ -6,83 +8,71 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
-import Design from "./sections/Design";
 import FadeInSection from "./components/FadeInSection";
 
-const SECTION_THEMES = [
-  { id: "hero",     className: "theme-hero" },
-  { id: "about",    className: "theme-about" },
-  { id: "skills",   className: "theme-skills" },
-  { id: "projects", className: "theme-projects" },
-  { id: "design",   className: "theme-design" },
-  { id: "contact",  className: "theme-contact" },
-];
-
 function App() {
-  const blobsRef = useRef(null);
-  const currentTheme = useRef("theme-hero");
+  const progressRef = useRef(null);
 
   useEffect(() => {
-    const blobs = blobsRef.current;
-    if (!blobs) return;
+    const lenis = new Lenis({
+      duration: 1.05,
+      smoothWheel: true,
+      wheelMultiplier: 0.9,
+    });
 
-    const applyTheme = (themeClass) => {
-      if (themeClass === currentTheme.current) return;
-      currentTheme.current = themeClass;
-      SECTION_THEMES.forEach(({ className }) => blobs.classList.remove(className));
-      blobs.classList.add(themeClass);
+    let frameId;
+    const raf = (time) => {
+      lenis.raf(time);
+      frameId = requestAnimationFrame(raf);
     };
 
-    const getActiveTheme = () => {
-      const mid = window.innerHeight * 0.5;
+    frameId = requestAnimationFrame(raf);
 
-      let best = SECTION_THEMES[0];
-      let bestTop = -Infinity;
+    return () => {
+      cancelAnimationFrame(frameId);
+      lenis.destroy();
+    };
+  }, []);
 
-      for (const theme of SECTION_THEMES) {
-        const el = document.getElementById(theme.id);
-        if (!el) continue;
-        const rect = el.getBoundingClientRect();
-        if (rect.top <= mid && rect.top > bestTop) {
-          bestTop = rect.top;
-          best = theme;
-        }
-      }
-      return best.className;
+  useEffect(() => {
+    const progress = progressRef.current;
+    if (!progress) return;
+
+    const setProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const value = max > 0 ? window.scrollY / max : 0;
+      gsap.to(progress, {
+        scaleX: value,
+        duration: 0.35,
+        ease: "power2.out",
+        transformOrigin: "left center",
+      });
     };
 
-    applyTheme(getActiveTheme());
-
-    const onScroll = () => applyTheme(getActiveTheme());
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    setProgress();
+    window.addEventListener("scroll", setProgress, { passive: true });
+    window.addEventListener("resize", setProgress);
+    return () => {
+      window.removeEventListener("scroll", setProgress);
+      window.removeEventListener("resize", setProgress);
+    };
   }, []);
 
   return (
-    <>
-      <div className="grain-overlay" aria-hidden="true" />
-
-      <div className="blob-canvas theme-hero" ref={blobsRef} aria-hidden="true">
-        <div className="blob blob-1" />
-        <div className="blob blob-2" />
-        <div className="blob blob-3" />
-      </div>
-
-      <div className="blur-vignette" aria-hidden="true" />
-
+    <div className="site-shell">
+      <div className="scroll-progress" ref={progressRef} aria-hidden="true" />
       <Navbar />
 
       <main>
-        <FadeInSection><Hero /></FadeInSection>
+        <Hero />
         <FadeInSection><About /></FadeInSection>
         <FadeInSection><Skills /></FadeInSection>
         <FadeInSection><Projects /></FadeInSection>
-        <FadeInSection><Design /></FadeInSection>
         <FadeInSection><Contact /></FadeInSection>
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -1,31 +1,26 @@
-import "../styles/Contact.css"
+import "../styles/Contact.css";
 
 function Contact() {
   return (
-      <section id="contact" className="contact section">
-        <div className="container">
+    <section id="contact" className="contact section">
+      <div className="container contact-grid">
+        <span className="section-kicker">Contact</span>
 
-          <h2>Contact</h2>
-
-          <p>Let's build something together.</p>
+        <div>
+          <p className="contact-statement">
+            Open to frontend roles, creative web projects, and collaborations
+            where design taste matters as much as code quality.
+          </p>
 
           <div className="contact-links">
-            <a href="mailto:danram20714@gmail.com">Email</a>
+            <a href="mailto:danram20714@gmail.com">danram20714@gmail.com</a>
             <a href="https://github.com/kratsaira" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
-
         </div>
-        
-        <div className="scroll-up">
-          <a href="#hero">Scroll up</a>
-        </div>
-
-      </section>
-
-
- 
-);
+      </div>
+    </section>
+  );
 }
 
 export default Contact;

@@ -1,106 +1,138 @@
-.projects { 
-  text-align: center; 
-  padding: 60px 20px; 
+.projects {
+  padding-top: clamp(96px, 13vw, 168px);
 }
 
-.projects h2 { 
-  font-size: clamp(28px, 6vw, 40px); 
-  margin-bottom: 40px; 
+.projects .section-note {
+  margin-bottom: clamp(56px, 9vw, 112px);
 }
 
-.projects-grid { 
-  display: grid; 
-  grid-template-columns: 1fr; 
-  gap: 20px; 
+.projects-grid {
+  display: grid;
 }
 
 .project-card {
-  background: rgba(255,255,255,0.03);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 8px;
-  padding: 20px;
-  text-align: left;
-  transition: all 0.25s ease;
+  min-height: clamp(280px, 30vw, 420px);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto auto;
+  gap: clamp(18px, 3vw, 42px);
+  align-items: center;
+  padding: clamp(36px, 6vw, 82px) 0;
+  border-top: 1px solid rgba(5, 5, 5, 0.22);
+  color: var(--ink);
+  position: relative;
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(255,255,255,0.18);
+.project-card:last-child {
+  border-bottom: 1px solid rgba(5, 5, 5, 0.22);
 }
 
-.project-card h3 { 
-  margin-bottom: 8px; 
-  font-size: 20px; 
+.project-body {
+  display: contents;
 }
 
-.project-card p  { 
-  color: #fff;
-  opacity: 0.8; 
-  margin-bottom: 16px; 
-  font-size: 15px; 
-  line-height: 1.6; 
+.project-body h3 {
+  grid-column: 1 / span 6;
+  grid-row: 1;
+  max-width: 900px;
+  color: var(--ink);
+  font-size: clamp(58px, 8.2vw, 118px);
+  line-height: 0.84;
+  font-weight: 760;
+  letter-spacing: -0.1em;
+  text-wrap: balance;
 }
 
-.tech { 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 8px; 
-  margin-bottom: 16px; 
+.project-body p {
+  grid-column: 8 / span 3;
+  grid-row: 1 / span 2;
+  align-self: center;
+  max-width: 360px;
+  color: rgba(5, 5, 5, 0.62);
+  font-size: clamp(14px, 1.2vw, 17px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.project-footer {
+  display: contents;
+}
+
+.project-stack {
+  grid-column: 1 / span 6;
+  grid-row: 2;
+  max-width: 760px;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 10px;
 }
 
 .tech span {
-  font-size: 12px;
-  padding: 4px 10px;
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.08);
-  color: #ccc;
+  color: rgba(5, 5, 5, 0.44);
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 560;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
 }
 
-.links a { 
-  font-size: 14px; 
-  color: #ddd; 
-  transition: color 0.2s ease; 
+.tech span:not(:last-child)::after {
+  content: "/";
+  margin-left: 10px;
+  color: rgba(5, 5, 5, 0.24);
 }
 
-.links a:hover { 
-  color: white; 
+.project-footer a,
+.disabled-link {
+  grid-column: 12;
+  grid-row: 1 / span 2;
+  align-self: center;
+  justify-self: end;
+  color: var(--ink);
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 560;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  white-space: nowrap;
+  position: relative;
+  transition: opacity 0.25s ease;
 }
 
-@media (min-width: 768px) {
-  .projects { padding: 80px 40px; }
-  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-}
-
-@media (min-width: 1024px) {
-  .projects { padding: 100px 20px; }
-  .project-card { padding: 24px; }
-  .project-card h3 { font-size: 22px; }
+.project-footer a:hover {
+  opacity: 0.48;
 }
 
 .disabled-link {
-  position: relative;
-  color: gray;
-  cursor: not-allowed;
-  font-size: 14px;
+  color: rgba(5, 5, 5, 0.38);
 }
 
-.tooltip {
-  position: absolute;
-  bottom: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: black;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 14px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-}
+@media (max-width: 980px) {
+  .project-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 22px;
+    min-height: auto;
+  }
 
-.disabled-link:hover .tooltip {
-  opacity: 1;
+  .project-body,
+  .project-footer {
+    display: grid;
+    gap: 18px;
+  }
+
+  .project-body h3,
+  .project-body p,
+  .project-stack,
+  .project-footer a,
+  .disabled-link {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: start;
+  }
+
+  .project-body p {
+    max-width: 620px;
+  }
 }

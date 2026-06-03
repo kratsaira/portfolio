@@ -1,20 +1,19 @@
-import "../styles/About.css"
+import "../styles/About.css";
 
 function About() {
-    return (
-      <section id="about" className="about section">
-        <div className="container">
-  
-          <h2>About Me</h2>
-  
+  return (
+    <section id="about" className="about section">
+      <div className="container">
+        <div className="about-intro">
+          <span className="section-kicker">About</span>
           <p>
-            I'm a 20 years old frontend-focused developer passionate about building visually enjoyable and performant web applications.
-            I have +2 years of experience building projects using different technologies and frameworks. Scroll down to see more information about me and my skills.
+            Frontend-focused developer building interfaces where layout, motion,
+            and implementation quality are treated as the same discipline.
           </p>
-  
         </div>
-      </section>
-    );
-  }
-  
-  export default About;
+      </div>
+    </section>
+  );
+}
+
+export default About;
